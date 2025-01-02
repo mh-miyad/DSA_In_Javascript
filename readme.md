@@ -1,0 +1,57 @@
+# JavaScript String and Array Methods
+
+/\*\*
+
+- String Methods in JavaScript
+- Here’s a list of commonly used string methods in JavaScript:
+-
+- - charAt(index): Returns the character at the specified index.
+- - charCodeAt(index): Returns the Unicode of the character at the specified index.
+- - concat(...strings): Combines two or more strings and returns a new string.
+- - includes(searchString): Checks if a string contains a specified substring.
+- - indexOf(searchValue): Returns the index of the first occurrence of a specified value.
+- - lastIndexOf(searchValue): Returns the index of the last occurrence of a specified value.
+- - repeat(count): Returns a string with a number of copies of the original string.
+- - replace(searchValue, newValue): Replaces a specified value with a new value in a string.
+- - replaceAll(searchValue, newValue): Replaces all occurrences of a specified value.
+- - slice(start, end): Extracts a section of a string and returns it as a new string.
+- - split(separator): Splits a string into an array of substrings.
+- - startsWith(searchString): Checks if the string starts with a specified substring.
+- - endsWith(searchString): Checks if the string ends with a specified substring.
+- - substring(start, end): Returns the part of a string between two specified indices.
+- - toLowerCase(): Converts all characters in a string to lowercase.
+- - toUpperCase(): Converts all characters in a string to uppercase.
+- - trim(): Removes whitespace from both ends of a string.
+- - trimStart(): Removes whitespace from the beginning of a string.
+- - trimEnd(): Removes whitespace from the end of a string.
+- - match(regex): Matches a string against a regular expression.
+- - search(regex): Returns the index of the first match of a regular expression.
+- - fromCharCode(...codes): Returns a string created from the specified Unicode values.
+-
+- Array Methods in JavaScript
+- Here’s a list of commonly used array methods in JavaScript:
+-
+- - concat(...arrays): Merges two or more arrays and returns a new array.
+- - copyWithin(target, start, end): Copies a portion of an array to another location in the same array.
+- - every(callback): Tests whether all elements in the array pass the test implemented by the provided function.
+- - filter(callback): Creates a new array with all elements that pass the test implemented by the provided function.
+- - find(callback): Returns the first element in the array that satisfies the provided testing function.
+- - findIndex(callback): Returns the index of the first element that satisfies the provided testing function.
+- - forEach(callback): Executes a provided function once for each array element.
+- - includes(value): Checks if an array contains a certain element.
+- - indexOf(value): Returns the first index at which a given element can be found.
+- - join(separator): Joins all elements of an array into a string, separated by the specified separator.
+- - map(callback): Creates a new array populated with the results of calling the provided function on every element in the array.
+- - pop(): Removes the last element from an array and returns it.
+- - push(...elements): Adds one or more elements to the end of an array and returns the new length of the array.
+- - reduce(callback, initialValue): Executes a reducer function on each element of the array (from left to right), resulting in a single output value.
+- - reduceRight(callback, initialValue): Same as reduce(), but iterates from right to left.
+- - reverse(): Reverses the elements of an array in place.
+- - shift(): Removes the first element from an array and returns it.
+- - slice(start, end): Returns a shallow copy of a portion of an array.
+- - sort(compareFunction): Sorts the elements of an array in place.
+- - splice(start, deleteCount, ...items): Changes the contents of an array by removing or replacing elements.
+- - toString(): Returns a string representing the array.
+- - unshift(...elements): Adds one or more elements to the beginning of an array and returns the new length of the array.
+- - valueOf(): Returns the primitive value of an array.
+    \*/
