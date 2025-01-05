@@ -19,3 +19,14 @@
 // Explanation: counter() initially returns -2. Then increases after each sebsequent call.
 
 //
+const value = ["call", "call", "call", "call", "call"];
+const number = -2;
+function createCounter(n) {
+  const result = [];
+  for (let i = 0; i <= value.length; i++) {
+    result.push(n++);
+  }
+  return result;
+}
+const result = createCounter(number);
+console.log(result);
