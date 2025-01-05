@@ -48,3 +48,16 @@
 // 0 <= nums.length <= 1000
 // 0 <= nums[i] <= 1000
 // 0 <= init <= 1000
+
+let nums = [1, 2, 3, 4];
+let fn = function sum(accum, curr) {
+  return accum + curr;
+};
+let init = 0;
+
+function reducer(arr, fn, int) {
+  const newArr = [...arr];
+  console.log(newArr);
+}
+
+reducer(nums, fn, init);
