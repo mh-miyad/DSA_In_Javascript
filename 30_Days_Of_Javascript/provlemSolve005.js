@@ -22,3 +22,33 @@
 // Input: arr = [10,20,30], fn = function constant() { return 42; }
 // Output: [42,42,42]
 // Explanation: The function always returns 42.
+
+const arr = [1, 2, 3];
+function plusI(n, i) {
+  console.log(n);
+  return n + 1;
+}
+function constant() {
+  return 42;
+}
+
+// problem solution here
+// function map(arr, fn) {
+//   const newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     newArr.push(fn(arr[i], i));
+//   }
+//   return newArr;
+// }
+
+//  here problem debug
+function map(arr, fn) {
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    // newArr.push(fn(arr[i], i));
+    console.log(fn(arr[i], i));
+  }
+  return newArr;
+}
+
+console.log(map(arr, plusI));
