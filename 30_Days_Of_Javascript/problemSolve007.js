@@ -53,11 +53,13 @@ let nums = [1, 2, 3, 4];
 let fn = function sum(accum, curr) {
   return accum + curr;
 };
-let init = 0;
+let init = 100;
 
 function reducer(arr, fn, int) {
-  const newArr = [...arr];
-  console.log(newArr);
+  return nums.reduce(fn, init);
 }
 
-reducer(nums, fn, init);
+const result = reducer(nums, fn, init);
+console.log(result);
+// const result = nums.reduce(fn, init);
+// console.log(result); // 10
