@@ -37,3 +37,18 @@
 // -1000 <= x <= 1000
 // 0 <= functions.length <= 1000
 // all functions accept and return a single integer
+//  [(x) => 10 * x, (x) => 10 * x, (x) => 10 * x](function (param) {
+//   console.log(param);
+// })("hello");
+
+var compose = function (functions) {
+  return function (x) {
+    return functions.reduceRight((acc, func) => func(acc), x);
+  };
+};
+
+const functions = [(x) => 10 * x, (x) => x + 5, (x) => x - 2];
+
+const composedFunction = compose(functions);
+
+console.log(composedFunction(1));
