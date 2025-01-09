@@ -53,15 +53,46 @@
 // Constraints:
 
 function memoize(fn) {
-  return function (...args) {
-    return fn(...args);
+  const cache = new Map();
+  let callCount = 0;
+  const memoized = function (...args) {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) {
+      return cache.get(key);
+    }
+    callCount++;
+    const result = fn(...args);
+    cache.set(key, result);
+    return result;
   };
+  memoized.getCallCount = function () {
+    return callCount;
+  };
+
+  return memoized;
 }
 
-let callCount = 0;
-const memoizedFn = memoize(function (a, b) {
-  callCount++;
-  return a + b;
-});
+// Example Usage
+const sum = (a, b) => a + b;
+const factorial = (n) => (n <= 1 ? 1 : n * factorial(n - 1));
+const fib = (n) => (n <= 1 ? 1 : fib(n - 1) + fib(n - 2));
 
-console.log(callCount, memoizedFn(2, 3));
+// Testing with sum
+const memoizedSum = memoize(sum);
+console.log(memoizedSum(2, 2)); // 4
+console.log(memoizedSum(2, 2)); // 4 (cached result)
+console.log(memoizedSum.getCallCount()); // 1
+console.log(memoizedSum(1, 2)); // 3
+console.log(memoizedSum.getCallCount()); // 2
+
+// Testing with factorial
+const memoizedFactorial = memoize(factorial);
+console.log(memoizedFactorial(2)); // 2
+console.log(memoizedFactorial(3)); // 6
+console.log(memoizedFactorial(2)); // 2 (cached result)
+console.log(memoizedFactorial.getCallCount()); // 2
+
+// Testing with fib
+const memoizedFib = memoize(fib);
+console.log(memoizedFib(5)); // 8
+console.log(memoizedFib.getCallCount()); // 1
