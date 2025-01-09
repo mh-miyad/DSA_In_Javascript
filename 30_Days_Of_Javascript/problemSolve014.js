@@ -22,11 +22,22 @@
  *  }, maxT + 15)
  */
 var cancellable = function (fn, args, t) {
-  let timeout = setTimeout(() => {
-    fn(...args);
-  }, t);
+  // let timeout = setTimeout(() => {
+  //   fn(...args);
+  // }, t);
 
-  return function () {
-    clearTimeout(timeout);
-  };
+  // return function () {
+  //   clearTimeout(timeout);
+  // };
+  fn(...args);
+  let timer = setInterval(() => fn(...args), t);
+
+  let cancelFn = () => clearInterval(timer);
+  return cancelFn;
 };
+
+let fn = (x) => x * 2;
+let args = [4];
+let t = 35;
+
+console.log(cancellable(fn, args, t));
