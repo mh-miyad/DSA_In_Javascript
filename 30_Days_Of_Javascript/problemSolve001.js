@@ -10,17 +10,20 @@
 
 //  problem sloving -1
 
-const nums = [2, 7, 11, 15];
-const target = 26;
-function twoSum(arr, tar) {
-  for (let num of arr) {
-    for (let j = 1; j < arr.length; j++) {
-      if (num + arr[j] === tar) {
-        return [num, arr[j]];
+function twoSum(nums, target) {
+  let result = [];
+  for (let num = 0; num < nums.length; num++) {
+    for (let j = num + 1; j < nums.length; j++) {
+      if (nums[num] + nums[j] === target) {
+        result.push(num, j);
+        return result;
       }
     }
   }
+  return result;
 }
 
+const nums = [2, 5, 5, 11];
+const target = 10;
 const result = twoSum(nums, target);
 console.log(result);
