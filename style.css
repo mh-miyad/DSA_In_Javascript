@@ -1,4 +1,28 @@
-body{
-  color: red;
+body {
+  color: white;
   background-color: black;
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-end;
+}
+#car1 {
+  width: 100px;
+  height: 120px;
+  background-color: red;
+}
+
+#car2 {
+  width: 120px;
+  height: 100px;
+  background-color: rgb(64, 38, 228);
+}
+#car3 {
+  width: 150px;
+  height: 130px;
+  background-color: rgb(11, 159, 146);
 }
