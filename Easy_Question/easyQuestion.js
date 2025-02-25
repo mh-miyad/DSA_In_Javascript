@@ -48,6 +48,12 @@
 function generateFibonacci(n) {
   let fibonacci = [];
   if (n <= 0) return fibonacci;
+  function addindition(i, j) {
+    if (fibonacci.length < n) {
+      fibonacci.push(i);
+      addindition(j, i + j);
+    }
+  }
 }
 
 console.log(generateFibonacci(5));
