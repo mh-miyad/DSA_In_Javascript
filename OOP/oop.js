@@ -1,4 +1,4 @@
-class OTPGenarator {
+class OTPGenerator {
   constructor(initialState) {
     this.otpLength = initialState.otpLength;
   }
@@ -15,7 +15,7 @@ class OTPGenarator {
   }
 }
 // console.log(performance.now());
-const otp = new OTPGenarator({
+const otp = new OTPGenerator({
   otpLength: 10,
 });
 console.log(otp.getOtp());
